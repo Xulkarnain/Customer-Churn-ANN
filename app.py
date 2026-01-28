@@ -70,3 +70,11 @@ if submit:
         st.write("👉 Recommended action: Offer retention incentives")
     else:
         st.success("✅ Customer is likely to stay")
+
+if prob >= 0.7:
+    st.error("🔴 High churn risk")
+elif prob >= 0.4:
+    st.warning("🟠 Medium churn risk")
+else:
+    st.success("🟢 Low churn risk")
+
